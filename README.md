@@ -1,14 +1,10 @@
 # HBT tracker
 
-<img src="https://i.imgur.com/qospQMX.gif" height="300" />
+<p align="center"><img src="./static/assets/banner.png" width="600" /></p>
 
-This is a simple website made as the final project for CS50. Its purpouse is to weekly keep track of habits.
-
-<img src="https://i.imgur.com/b8Ptkzb.gif" height="300" />
-
-It is possible to register, edit and delete habits, in addition to accompanying them weekly.
-
-<img src="https://i.imgur.com/kOJz7Ab.gif" height="300" />
+<p align="center"><img src="https://i.imgur.com/qospQMX.gif" width="600" /></p>
+<p align="center"><img src="https://i.imgur.com/b8Ptkzb.gif" width="600" /></p>
+<p align="center"><img src="https://i.imgur.com/kOJz7Ab.gif" width="600" /></p>
 
 ## How to run
 
