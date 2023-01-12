@@ -1,2 +1,4 @@
 /instance
 /flask_session
+Pipfile
+Pipfile.lock
