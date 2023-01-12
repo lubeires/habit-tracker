@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block main %}
+
+<main class="d-flex flex-column align-items-center justify-content-center">
+    <div class="container h-100">
+        <h3 class="text-light p-0 mb-5">Hi there, <em class="text-warning h3">{{ name }}</em>!</h3>
+        <div class="d-flex justify-content-between align-items-center my-3">
+            <em class="text-light m-0 h5">{{ date }}</em>
+            <button id="clear" type="button" class="btn btn-outline-warning btn-sm" title="clear all checked habits">Clear</button>
+        </div>
+        <div class="progress" style="height: .4rem; background-color: var(--bs-gray);">
+            <div id="progress" class="progress-bar bg-warning" role="progressbar"
+                aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        {% if habits %}
+        <table class="table text-light my-4">
+            <thead>
+                <tr>
+                    <th></th>
+                    {% for day in days %}
+                    <th id={{ day }} scope="col">{{ days[day] }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for habit in habits %}
+                <tr style="line-height: 2rem;">
+                    <th scope="row">{{ habit.name }}</th>
+                    {% for day in days %}
+                    <td>
+                        {% if day in habit.frequency %}
+                        {% set id = [day, habit.id] | join(' ') %}
+                        <input type="checkbox" class="form-check-input border-light bg-transparent" style="height: 1.6rem; width: 1.6rem;" id="{{ id }}" {{ checks[id] }}>
+                        {% endif %}
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% else %}
+</div>  
+    <em class="h5 m-5" style="color: var(--bs-gray);">There is no habits yet...</em>
+    {% endif %}
+    <a class="text-warning" href="/new-habit">Add habit</a>
+    <a class="text-warning" href="/habits">Manage habits</a>
+</main>
+
+<script src="/static/script.js"></script>
+{% endblock %}

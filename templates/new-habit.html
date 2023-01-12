@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+New habit
+{% endblock %}
+
+{% block main %}
+<main class="d-flex flex-column align-items-center justify-content-center">
+    <h3 class="text-light mx-5 px-4">Habit</h3>
+    <form class="m-5 justify-content-center" action="/new-habit" method="post">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Name" id="name" name="name" autofocus>
+        </div>
+        <p class="text-light m-1 p-1">Frequency</p>
+        {% for day in days %}
+        <input type="checkbox" class="btn-check" id="{{ day }}" name="frequency" autocomplete="off" value="{{ day }}">
+        <label class="btn btn-outline-light m-1" for="{{ day }}">{{ days[day] }}</label>
+        {% endfor %}
+        <div class="d-flex justify-content-center w-100 my-4">
+            <button type="submit" class="btn btn-outline-warning w-25 btn-lg">Save</button>
+        </div>
+        
+    </form>
+
+</main>
+{% endblock %}

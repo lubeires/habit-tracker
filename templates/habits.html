@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}
+Habits
+{% endblock %}
+
+{% block main %}
+<main class="d-flex flex-column align-items-center justify-content-center">
+    <h3 class="text-light mx-5 px-5">My habits</h3>
+    {% if not habits %}
+    <em class="h5 mt-5" style="color: var(--bs-gray);">There is no habits yet...</em>
+    {% else %}
+    <div class="container mt-4 habits w-50 d-flex justify-content-center">
+        <ul class="list-group w-100">
+            {% for habit in habits %}
+            <li class="list-group-item bg-dark text-light d-flex justify-content-between align-items-start mt-1">
+                <div class="m-3">
+                    <div class="fw-bold h5 text-break">{{ habit.name }}</div>
+                    <em class="text-light">{{ habit.frequency }}</em>
+                </div>
+                <div style="min-width: 75px;">
+                    <a href="/edit/{{ habit.id }}" class="btn btn-outline-primary btn-sm me-3">Edit</a>
+                    <a href="/delete/{{ habit.id }}" class="text-danger text-decoration-none h4">x</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <a href="/new-habit" class="btn btn-outline-warning m-5 btn-lg">New habit</a>
+
+</main>
+{% endblock %}
