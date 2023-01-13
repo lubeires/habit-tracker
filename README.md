@@ -1,10 +1,10 @@
 # HBT tracker
 
-[<p align="center"><img src="./static/assets/banner.png" width="600" /></p>](https://habit-tracker-l6h0.onrender.com)
+[<img src="./static/assets/banner.png" width="600" />](https://habit-tracker-l6h0.onrender.com)
 
-<p align="center"><img src="https://i.imgur.com/qospQMX.gif" width="600" /></p>
-<p align="center"><img src="https://i.imgur.com/b8Ptkzb.gif" width="600" /></p>
-<p align="center"><img src="https://i.imgur.com/kOJz7Ab.gif" width="600" /></p>
+<div><img src="https://i.imgur.com/qospQMX.gif" /></div>
+<div><img src="https://i.imgur.com/b8Ptkzb.gif" /></div>
+<div><img src="https://i.imgur.com/kOJz7Ab.gif" /></div>
 
 ## How to run
 
