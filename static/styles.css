@@ -81,3 +81,6 @@ main .log {
   max-width: 700px;
   min-width: 300px;
 }
+footer {
+  height: 28px;
+}
