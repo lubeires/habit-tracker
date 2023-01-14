@@ -10,7 +10,7 @@
 
 ### Prerequisites
 
-Before you start, you need to have [Python](https://www.python.org/downloads/) 3.8 (or higher version) installed on your machine.
+Before you start, you need to have [Python](https://www.python.org/downloads/) installed on your machine.
 
 ### Running
 
